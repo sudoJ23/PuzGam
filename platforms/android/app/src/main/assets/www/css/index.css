@@ -1,0 +1,70 @@
+@font-face {
+  src: url('../../kelasku/font/DAGGERSQUARE.otf');
+  font-family: 'dager';
+}
+
+.white {
+  color: white;
+}
+
+.dager {
+  font-family: 'dager' !important;
+}
+
+.medium {
+  font-size: 20pt !important;
+}
+
+.large {
+  font-size: 40pt !important;
+}
+
+.nomargin {
+  margin: 0px !important;
+}
+
+.red_transparent {
+  color: rgba(255, 0, 0, 0.8);
+}
+
+.red_shadow {
+  text-shadow: 2px 2px 6px rgba(204, 0, 0, 2);
+}
+
+.white-shadow {
+  text-shadow: 2px 2px 6px rgba(255, 255, 255, 0.5);
+}
+
+.txt-center {
+  text-align: center !important;
+}
+
+.start_btn {
+  height: 50px;
+  width: 190px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255,0.8);
+  font-family: 'dager';
+  border-radius: 8px;
+  border: 0px;
+  transform: translateY(120px);
+  font-size: 25px;
+  font-weight: bold;
+  line-height: 50px;
+  outline: none;
+}
+
+.start_btn:active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+#main .page__background {
+  /* background: url('../img/wallpaper/82160.jpg'); */
+  background: url('../img/wallpaper/astronaut_minimalist.jpg');
+  background-size: cover;
+}
+
+#home .page__background {
+  background: url('../img/wallpaper/145304.jpg');
+  background-size: cover;
+}

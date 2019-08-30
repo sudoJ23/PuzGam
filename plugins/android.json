@@ -1,0 +1,21 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "org.j23.puzgam"
+    },
+    "cordova-plugin-exit": {
+      "PACKAGE_NAME": "org.j23.puzgam"
+    },
+    "kr.co.joycorp.cordova.exitapp": {
+      "PACKAGE_NAME": "org.j23.puzgam"
+    }
+  },
+  "dependent_plugins": {}
+}

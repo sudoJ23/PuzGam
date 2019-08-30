@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <script src="./js/canvas.js"></script> -->
+    <link rel="stylesheet" href="css/onsenui.css">
+    <link rel="stylesheet" href="css/onsen-css-components.min.css">
+    <script src="./js/jquery.js"></script>
+    <!-- <script src="./js/jquery.js" type="text/javascript"></script> -->
+    <script src="js/onsenui.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <ons-navigator page="init.html" id="appNavigator" swipeable swipe-target-width="80px"></ons-navigator>
+
+    <template id="init.html">
+        <ons-page id="init">
+            <ons-splitter id="appSplitter">
+                <ons-splitter-content page="main.html"></ons-splitter-content>
+            </ons-splitter>
+        </ons-page>
+    </template>
+
+    <template id="main.html">
+        <ons-page id="main">
+            <center>
+                <!-- <div id="suara_btn" class="suara" onclick="suara()">
+                    <div class="icon">
+                        <img id="icon_suara" src="img/icon/ios-volume-high.svg" height="100%" width="100%">
+                    </div>
+                </div> -->
+                <div id="start_btn" onclick="ganti('menu.html');">MULAI</div>
+            </center>
+            <script>
+                // init();
+            </script>
+        </ons-page>
+    </template>
+
+    <template id="menu.html">
+        <ons-page id="menu">
+            <audio id="suara" src="mp3/theme.mp3" controls muted autoplay loop style="visibility: hidden;"></audio>
+            <div class="suara" onclick="suara()">
+                <div class="icon">
+                    <img id="icon_suara" src="img/icon/ios-volume-high.svg" height="100%" width="100%">
+                </div>
+            </div>
+            <center>
+                <div id="alfabet_btn" onclick="ganti('alfabet.html');">ALFABET</div>
+                <div id="mewarnai_btn" onclick="tidaktersedia();/*ganti('mewarnai.html');*/">MEWARNAI</div>
+                <div id="puzzle_btn" onclick="ganti('puzzle_menu.html');">PUZZLE</div>
+                <!-- <div id="keluar_btn" onclick="keluar();">KELUAR</div> -->
+            </center>
+            <script>
+                setInterval(init, 10);
+            </script>
+        </ons-page>
+    </template>
+
+    <template id="alfabet.html">
+        <ons-page id="alfabet">
+            <link rel="stylesheet" href="./css/alfabet.css">
+            <center>
+                <div id="kotak">
+                    <div class="abjad" onclick="playS('A');">A</div>
+                    <div class="abjad" onclick="playS('B');">B</div>
+                    <div class="abjad" onclick="playS('C');">C</div>
+                    <div class="abjad" onclick="playS('D');">D</div><br>
+                    <div class="abjad" onclick="playS('E');">E</div>
+                    <div class="abjad" onclick="playS('F');">F</div>
+                    <div class="abjad" onclick="playS('G');">G</div>
+                    <div class="abjad" onclick="playS('H');">H</div><br>
+                    <div class="abjad" onclick="playS('I');">I</div>
+                    <div class="abjad" onclick="playS('J');">J</div>
+                    <div class="abjad" onclick="playS('K');">K</div>
+                    <div class="abjad" onclick="playS('L');">L</div><br>
+                    <div class="abjad" onclick="playS('M');">M</div>
+                    <div class="abjad" onclick="playS('N');">N</div>
+                    <div class="abjad" onclick="playS('O');">O</div>
+                    <div class="abjad" onclick="playS('P');">P</div><br>
+                    <div class="abjad" onclick="playS('Q');">Q</div>
+                    <div class="abjad" onclick="playS('R');">R</div>
+                    <div class="abjad" onclick="playS('S');">S</div>
+                    <div class="abjad" onclick="playS('T');">T</div><br>
+                    <div class="abjad" onclick="playS('U');">U</div>
+                    <div class="abjad" onclick="playS('V');">V</div>
+                    <div class="abjad" onclick="playS('W');">W</div>
+                    <div class="abjad" onclick="playS('X');">X</div><br>
+                    <div class="abjad" onclick="playS('Y');">Y</div>
+                    <div class="abjad" onclick="playS('Z');">Z</div>
+                    <div class="kembali_btn" onclick="hapus('alfabet.html')">KEMBALI</div>
+                </div>
+            </center>
+        </ons-page>
+    </template>
+
+    <template id="mewarnai.html">
+        <ons-page id="mewarnai">
+            <script src="./js/canvas.js"></script>
+            <center>
+                <div id="canvasDiv"></div>
+                <div class="kembali_btn" onclick="hapus('mewarnai.html');">KEMBALI</div>
+            </center>
+            <script>
+                drawingApp.init();
+            </script>
+        </ons-page>
+    </template>
+
+    <template id="puzzle.html">
+        <ons-page id="puzzle">
+            <ons-splitter>
+                <ons-splitter-content page="puzzle_mudah.html"></ons-splitter-content>
+            </ons-splitter>
+        </ons-page>
+    </template>
+
+    <template id="puzzle_menu.html">
+        <ons-page id="puzzle_menu">
+            <center>
+                <!-- <div class="mudah_btn" onclick="setTimeout(function(){level = 'easy';loadImage('easy');/*shuffleTiles('easy');*/setInterval(function(){ secs++ }, 1000);}, 1000);ganti('puzzle_mudah.html');">MUDAH</div> -->
+                <div class="mudah_btn" onclick="setTimeout(function(){level = 'easy';loadImage('easy');shuffleTiles('easy');setInterval(function(){ secs++ }, 1000);}, 1000);ganti('puzzle_mudah.html');">MUDAH</div>
+                <div class="sedang_btn" onclick="setTimeout(function(){level = 'medium';loadImage('medium');shuffleTiles('medium');setInterval(function(){ secs++ }, 1000);}, 1000);ganti('puzzle_sedang.html');">SEDANG</div>
+                <div class="sulit_btn" onclick="setTimeout(function(){level = 'hard';loadImage('hard');shuffleTiles('hard');setInterval(function(){ secs++ }, 1000);}, 1000);ganti('puzzle_sulit.html');">SULIT</div>
+                <div class="kembali_btn" onclick="hapus('puzzle_menu.html');">KEMBALI</div>
+            </center>
+        </ons-page>
+    </template>
+
+    <template id="puzzle_mudah.html">
+        <ons-page id="puzzle_mudah">
+                <link rel="stylesheet" href="css/puzzle.css">
+                <script src="./js/puzzle.js"></script>
+                <center>
+                    <article id="artikel" class="artikel_mudah">
+                            <div class="pieces mudah" id="piece-1"></div>
+                            <div class="pieces mudah" id="piece-2"></div>
+                            <div class="pieces mudah" id="piece-3"></div>
+                            <div class="pieces mudah" id="piece-4"></div>
+                            <div class="pieces mudah" id="piece-5"></div>
+                            <div class="pieces mudah" id="piece-6"></div>
+                            <div class="pieces mudah" id="piece-7"></div>
+                            <div class="pieces mudah" id="piece-8"></div>
+                            <div class="pieces mudah" id="piece-9"></div>
+                    </article>
+                    <div id="hint_btn" onclick="aaa">?</div>
+                    <div class="selanjutnya_btn" onclick="random();reload('easy');shuffleTiles('easy');">SELANJUTNYA</div>
+                    <div class="kembali_btn" onclick="hapus('puzzle_mudah.html');">KEMBALI</div>
+                    <!-- <div class="kembali_btn" onclick="unload('easy');ganti('puzzle_menu.html');">KEMBALI</div> -->
+                </center>
+                <script>
+                </script>
+        </ons-page>
+    </template>
+
+    <template id="puzzle_sedang.html">
+        <ons-page id="puzzle_sedang">
+                <link rel="stylesheet" href="css/puzzle.css">
+                <script src="./js/puzzle.js"></script>
+                <center>
+                    <article id="artikel" class="artikel_sedang">
+                        <div class="pieces sedang" id="s1"></div>
+                        <div class="pieces sedang" id="s2"></div>
+                        <div class="pieces sedang" id="s3"></div>
+                        <div class="pieces sedang" id="s4"></div>
+                        <div class="pieces sedang" id="s5"></div>
+                        <div class="pieces sedang" id="s6"></div>
+                        <div class="pieces sedang" id="s7"></div>
+                        <div class="pieces sedang" id="s8"></div>
+                        <div class="pieces sedang" id="s9"></div>
+                        <div class="pieces sedang" id="s10"></div>
+                        <div class="pieces sedang" id="s11"></div>
+                        <div class="pieces sedang" id="s12"></div>
+                        <div class="pieces sedang" id="s13"></div>
+                        <div class="pieces sedang" id="s14"></div>
+                        <div class="pieces sedang" id="s15"></div>
+                        <div class="pieces sedang" id="s16"></div>
+                    </article>
+                    <div id="hint_btn" onclick="aaa">?</div>
+                    <div class="selanjutnya_btn" onclick="random();reload('medium');shuffleTiles('medium');">SELANJUTNYA</div>
+                    <div class="kembali_btn" onclick="hapus('puzzle_sedang.html');">KEMBALI</div>
+                </center>
+                <script>
+                    // setTimeout(function(){
+                    //     loadImage('medium');
+                    //     shuffleTiles('medium');
+                    // 	setInterval(function(){ 
+                    // 		secs++ 
+                    // 	}, 1000);
+                    // }, 1000);
+                </script>
+        </ons-page>
+    </template>
+
+    <template id="puzzle_sulit.html">
+        <ons-page id="puzzle_sulit">
+                <link rel="stylesheet" href="css/puzzle.css">
+                <script src="./js/puzzle.js"></script>
+                <center>
+                    <article id="artikel" class="artikel_sedang">
+                        <div class="pieces hard" id="h1"></div>
+                        <div class="pieces hard" id="h2"></div>
+                        <div class="pieces hard" id="h3"></div>
+                        <div class="pieces hard" id="h4"></div>
+                        <div class="pieces hard" id="h5"></div>
+                        <div class="pieces hard" id="h6"></div>
+                        <div class="pieces hard" id="h7"></div>
+                        <div class="pieces hard" id="h8"></div>
+                        <div class="pieces hard" id="h9"></div>
+                        <div class="pieces hard" id="h10"></div>
+                        <div class="pieces hard" id="h11"></div>
+                        <div class="pieces hard" id="h12"></div>
+                        <div class="pieces hard" id="h13"></div>
+                        <div class="pieces hard" id="h14"></div>
+                        <div class="pieces hard" id="h15"></div>
+                        <div class="pieces hard" id="h16"></div>
+                        <div class="pieces hard" id="h17"></div>
+                        <div class="pieces hard" id="h18"></div>
+                        <div class="pieces hard" id="h19"></div>
+                        <div class="pieces hard" id="h20"></div>
+                        <div class="pieces hard" id="h21"></div>
+                        <div class="pieces hard" id="h22"></div>
+                        <div class="pieces hard" id="h23"></div>
+                        <div class="pieces hard" id="h24"></div>
+                        <div class="pieces hard" id="h25"></div>
+                    </article>
+                    <div id="hint_btn" onclick="aaa">?</div>
+                    <div class="selanjutnya_btn" onclick="random();reload('hard');shuffleTiles('hard');">SELANJUTNYA</div>
+                    <div class="kembali_btn" onclick="hapus('puzzle_sulit.html');">KEMBALI</div>
+                </center>
+        </ons-page>
+    </template>
+
+    <ons-popover direction="up" id="hint" cancelable mask-color="rgba(0, 0, 0, 0.8)">
+        <div style="padding: 10px; text-align: center;">
+            <center>
+                <img id="hint-img" src="img/hint/1.png" height="100%" width="100%">
+            </center>
+        </div>
+    </ons-popover>
+
+    <!-- <template id="hint.html">
+        <ons-popover cancelable>
+            <img id="hint-img" src="img/hint/1.png">
+        </ons-popover>
+    </template> -->
+</body>
+                    <!-- 
+                        <div class="pieces mudah" id="piece-1"></div>
+                        <div class="pieces mudah" id="piece-2"></div>
+                        <div class="pieces mudah" id="piece-3"></div>
+                        <div class="pieces mudah" id="piece-4"></div>
+                        <div class="pieces mudah" id="piece-5"></div>
+                        <div class="pieces mudah" id="piece-6"></div>
+                        <div class="pieces mudah" id="piece-7"></div>
+                        <div class="pieces mudah" id="piece-8"></div>
+                        <div class="pieces mudah" id="piece-9"></div>
+                    -->
+</html>

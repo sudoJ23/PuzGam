@@ -1,0 +1,247 @@
+@font-face {
+    src: url('../font/Longdoosi-Regular.ttf');
+    font-family: 'longdoosi';
+}
+
+#main .page__background {
+    animation: splash_screen 3s ease-in;
+    background: url('../img/splash1.jpg');
+    background-size: cover;
+}
+
+#alfabet .page__background {
+    background: url('../img/backgroundMenu.jpg');
+    background-size: cover;
+}
+
+#menu .page__background {
+    background: url('../img/backgroundMenu.jpg');
+    background-size: cover;
+}
+
+#puzzle_menu .page__background {
+    background: url('../img/backgroundMenu.jpg');
+    background-size: cover;
+}
+
+#hint {
+    height: 200px;
+    width: 200px;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+}
+
+.suara {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+}
+
+#start_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 60px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: #45b227;
+    margin-top: 295px;
+    margin-bottom: 295px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+#start_btn:active {
+    background-color: #307c1b;
+}
+
+#alfabet_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 60px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(61, 61, 61, 0.8);
+    margin-top: 140px;
+    margin-bottom: 15px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+#mewarnai_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 60px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(61, 61, 61, 0.8);
+    /* margin-top: 198px; */
+    margin-bottom: 15px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+#puzzle_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 60px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(61, 61, 61, 0.8);
+    /* margin-top: 198px; */
+    margin-bottom: 170px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+#alfabet_btn:active, #mewarnai_btn:active, #puzzle_btn:active {
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+#keluar_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 60px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(209, 9, 9, 0.8);
+    /* margin-top: 198px; */
+    margin-bottom: 62px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+#keluar_btn:active {
+    background-color: rgb(187, 1, 1);
+}
+
+/* BATAS */
+
+.mudah_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    background-color: #61e91e;
+    margin-top: 205px;
+    margin-bottom: 10px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.mudah_btn:active {
+    background-color: #51c019;
+}
+
+.sedang_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: 75px;
+    margin-left: 75px;
+    background-color: #e3e91e;
+}
+
+.sedang_btn:active {
+    background-color: #bac019;
+}
+
+.sulit_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 153px;
+    margin-right: 75px;
+    margin-left: 75px;
+    background-color: #e97d1e;
+}
+
+.sulit_btn:active {
+    background-color: #b66219;
+}
+
+.kembali_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'longdoosi';
+    font-size: 30pt;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 62px;
+    margin-right: 75px;
+    margin-left: 75px;
+    background-color: #e41a15;
+}
+
+.kembali_btn:active {
+    background-color: #b11311;
+}
+
+.selanjutnya_btn {
+    height: 50px;
+    width: 210px;
+    border: 0px;
+    border-radius: 20px;
+    font-family: 'longdoosi';
+    font-size: 25pt;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-right: 75px;
+    margin-left: 75px;
+    background-color: #3cce1f;
+}
+
+.selanjutnya_btn:active {
+    background-color: #288a14;
+}
+
+.selanjutnya_btn:disabled {
+    background-color: #163d0f;
+}
+
+@keyframes splash_screen {
+    0% {
+        filter: blur(5px);
+    }
+
+    50% {
+        filter: blur(0px);
+    }
+}

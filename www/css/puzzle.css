@@ -1,0 +1,371 @@
+/* body{
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	color: #616c84;
+	background: #ffffff;
+	line-height: 1.7em;
+	padding: 0;
+	margin: 0;
+} */
+
+p {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+article {
+	/* transform: rotateZ(90deg); */
+	/* margin-left: 40px;
+	margin-right: 40px;
+	background: #f2f2f2;
+	margin: 40px auto 20px auto; */
+	width: 200px;
+	height: 200px;
+	margin-top: 100px;
+	position: relative;
+	-webkit-transition: all 0.8s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+	-ms-transition: all 0.8s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+	-moz-transition: all 0.8s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+	transition: all 0.8s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+}
+
+.artikel_mudah {
+	height: 306px !important;
+	width: 306px !important;
+	overflow: hidden;
+}
+
+.artikel_sedang {
+	height: 280px !important;
+	width: 280px !important;
+	overflow: hidden;
+}
+
+.mudah {
+	width: 100px !important;
+	height: 100px !important;
+}
+
+.sedang {
+	width: 70px !important;
+	height: 70px !important;
+}
+
+.hard {
+	width: 55px !important;
+	height: 55px !important;
+}
+
+#hint_btn {
+	height: 30px;
+	width: 30px;
+	border-radius: 9px;
+	font-size: 20pt;
+	background: rgba(0, 0, 0, 0.6);
+	color: white;
+	margin-top: 30px;
+}
+
+#s1 {
+	top: 0px;
+	left: 0px;
+}
+
+#s2 {
+	top: 0px;
+	left: 70px;
+}
+
+#s3 {
+	top: 0px;
+	left: 140px;
+}
+
+#s4 {
+	top: 0px;
+	left: 210px;
+}
+
+#s5 {
+	top: 70px;
+	left: 0px;
+}
+
+#s6 {
+	top: 70px;
+	left: 70px;
+}
+
+#s7 {
+	top: 70px;
+	left: 140px;
+}
+
+#s8 {
+	top: 70px;
+	left: 210px;
+}
+
+#s9 {
+	top: 140px;
+	left: 0px;
+}
+
+#s10 {
+	top: 140px;
+	left: 70px;
+}
+
+#s11 {
+	top: 140px;
+	left: 140px;
+}
+
+#s12 {
+	top: 140px;
+	left: 210px;
+}
+
+#s13 {
+	top: 210px;
+	left: 0px;
+}
+
+#s14 {
+	top: 210px;
+	left: 70px;
+}
+
+#s15 {
+	top: 210px;
+	left: 140px;
+}
+
+#s16 {
+	top: 210px;
+	left: 210px;
+}
+
+#h1 {
+	top: 0px;
+	left: 0px;
+}
+
+#h2 {
+	top: 0px;
+	left: 55px;
+}
+
+#h3 {
+	top: 0px;
+	left: 110px;
+}
+
+#h4 {
+	top: 0px;
+	left: 165px;
+}
+
+#h5 {
+	top: 0px;
+	left: 220px;
+}
+
+#h6 {
+	top: 55px;
+	left: 0px;
+}
+
+#h7 {
+	top: 55px;
+	left: 55px;
+}
+
+#h8 {
+	top: 55px;
+	left: 110px;
+}
+
+#h9 {
+	top: 55px;
+	left: 165px;
+}
+
+#h10 {
+	top: 55px;
+	left: 220px;
+}
+
+#h11 {
+	top: 110px;
+	left: 0px;
+}
+
+#h12 {
+	top: 110px;
+	left: 55px;
+}
+
+#h13 {
+	top: 110px;
+	left: 110px;
+}
+
+#h14 {
+	top: 110px;
+	left: 165px;
+}
+
+#h15 {
+	top: 110px;
+	left: 220px;
+}
+
+#h16 {
+	top: 165px;
+	left: 0px;
+}
+
+#h17 {
+	top: 165px;
+	left: 55px;
+}
+
+#h18 {
+	top: 165px;
+	left: 110px;
+}
+
+#h19 {
+	top: 165px;
+	left: 165px;
+}
+
+#h20 {
+	top: 165px;
+	left: 220px;
+}
+
+#h21 {
+	top: 220px;
+	left: 0px;
+}
+
+#h22 {
+	top: 220px;
+	left: 55px;
+}
+
+#h23 {
+	top: 220px;
+	left: 110px;
+}
+
+#h24 {
+	top: 220px;
+	left: 165px;
+}
+
+#h25 {
+	top: 220px;
+	left: 220px;
+}
+
+
+.pieces {
+    /* transform: rotateZ(90deg); */
+    width: 100px;
+    height: 100px;
+    position: absolute;
+	z-index: 100;
+	overflow: hidden;
+    -webkit-transition: all 0.6s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+    -ms-transition: all 0.6s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+    -moz-transition: all 0.6s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+    transition: all 0.6s cubic-bezier(0.58, -0.55, 0.265, 1.45);
+    perspective: 1000;
+}
+
+#piece-1 {
+	top: 0;
+	left: 0;
+    /* background: url("../img/puzzle-1.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-2{
+	top: 0;
+	left: 100px;
+    /* background: url("../img/puzzle-2.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-3{
+	top: 0;
+	left: 200px;
+    /* background: url("../img/puzzle-3.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-4{
+	top: 100px;
+	left: 0;
+    /* background: url("../img/puzzle-4.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-5{
+	top: 100px;
+	left: 100px;
+    /* background: url("../img/puzzle-5.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-6{
+	top: 100px;
+	left: 200px;
+    /* background: url("../img/puzzle-6.jpg");
+    background-size: 100px 100px; */
+}
+
+#piece-7 {
+	top: 200px;
+	left: 0px;
+}
+
+#piece-8 {
+	top: 200px;
+	left: 100px;
+}
+
+#piece-9 {
+	top: 200px;
+	left: 200px;
+}
+
+p{
+	margin: 20px auto;
+	width: 1020px;
+	text-align: center;
+	}
+
+.glow{
+	z-index: 101;
+    -webkit-box-shadow: 0px 0px 6px 0px #000000;
+  	box-shadow: 0px 0px 6px 0px #000000;
+  	transform: scale(1.1);
+	}
+
+@-webkit-keyframes animate-guage {
+	0%   { transform: scale(1.04); }
+	50%   { transform: scale(1.06); }
+	100%  { transform: scale(1.04); }
+	}
+
+.glow-2{ -webkit-transform: rotateX(360deg); }
+
+@-webkit-keyframes animate-guage-2 {
+	0%   { transform: scale(1); }
+	50%   { transform: scale(1.02); }
+	100%  { transform: scale(1); }
+	}
