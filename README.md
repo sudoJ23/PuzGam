@@ -1,4 +1,4 @@
-# puzgam
+# Puzgam
 Hanya sebuah game
 
 # Social media
